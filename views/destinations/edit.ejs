@@ -1,0 +1,11 @@
+<!-- views/destinations/edit.ejs -->
+<%- include('../partials/header') %>
+<h1>Edit Destination</h1>
+<form action="/destinations/<%= destination._id %>?_method=PUT" method="post">
+  <label for="airport">Airport:</label>
+  <input type="text" id="airport" name="airport" value="<%= destination.airport %>" required><br>
+  <label for="arrival">Arrival Date/Time:</label>
+  <input type="datetime-local" id="arrival" name="arrival" value="<%= destination.arrival %>" required><br>
+  <button type="submit">Update Destination</button>
+</form>
+<%- include('../partials/footer') %>

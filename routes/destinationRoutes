@@ -1,0 +1,11 @@
+// routes/destinationRoutes.js
+const express = require('express');
+const destinationController = require('../controllers/destinationController');
+
+const router = express.Router();
+
+router.post('/:id/destinations', destinationController.addDestination);
+
+module.exports = router;
+
+
